@@ -1,0 +1,32 @@
+
+SUBPROGRAMA
+------------
+Conocido como procedimiento o función, es un mini algoritmo que recibe datos necesarios para realizar una tarea desde el programa y devuelve los resultados de esa tarea.
+
+*-Función: conjunto de líneas de código encapsuladas en un bloque. Usualmente, según los parámetros definidos en la función, esta recibe argumentos (algunas no reciben nada), cuyos valores se utilizan para efectuar operaciones y adicionalmente retorna un valor.
+Se les define un modificador de acceso (controla la visibilidad), un modificador No de acceso (controlan el comportamiento de la función).
+Cualquier instrucción posterior al return no será ejecutada.
+Si se declara un tipo de valor en a la función, el retorno debe coincidir:
+
+public Int número(){
+return 7;
+};
+
+Argumentos o parámetros: tienen un tipo y nombre que los identifica, y no tiene relación con el tipo de método.
+Al recibir un argumento, nada obliga a utilizarlo, pero carece de sentido declararlo si no se va a usar.
+
+
+*-Procedimiento: función sin retorno. Su retorno es void, lo que indica que no devuelve ningún resultado.
+
+Técnicamente un MÉTODO es una función.
+
+
+
+
+
+
+
+
+
+
+
