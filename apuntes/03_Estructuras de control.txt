@@ -1,0 +1,37 @@
+ESTRUCTURAS DE CONTROL
+----------------------
+
+Son construcciones hechas a partir de palabras reservadas que permiten modificar el flujo de ejecución del programa.
+Se puede crear construcciones de alternativa mediante sentencias condicionales y bucles de repetición de bloques de instrucciones.
+
+Instrucciones de bifurcación:
+Interrumpen el desarrollo lineal de un programa, y pueden dirigirse en el programa hacia adelante o hacia atrás, dependiendo el punto del programa en el que se ejecuta la instrucción.
+
+Operadores condicionales:
+&& - and
+|| - or
+!  - operador lógico de negación
+
+Estructuras condicionales:
+--------------------------
+
+Cambian el flujo de ejecución según si se cumple o no una condición.
+Son 2: if/else y switch.
+
+Estructuras repetitivas:
+------------------------
+Se denominan "bucles" y se denomina "iteración" al hecho de repetir la ejecución de una secuencia de acciones.
+Todo bucle lleva una condición que determina si se repite o deja de repetirse.
+Son 3:
+-while    - mientras
+-do/while - hacer/mientras
+-for
+
+Sentencias de salto: 
+--------------------
+Es un salto incondicional del flujo:
+*- break - abandona la estructura de control.
+*- continue - corta la iteración en donde se encuentra, pero sin salir del bucle y continúa con la siguiente iteración.
+
+
+
