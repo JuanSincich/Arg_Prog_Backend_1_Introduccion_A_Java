@@ -1,0 +1,100 @@
+
+ARREGLOS (ARRAYS)
+-----------------
+
+Un arreglo es un contenedor de objetos con valores del mismo tipo.
+
+Una vez establecido su tamaño, no se puede cambiar.
+
+cada elemento del array es accedido por un índice que arranca en 0.
+
+
+Declaración y creación de un vector:
+tipo[] nombreDelArray =new tipo[tamaño];
+
+Declaración y creación de una matriz:
+
+tipo[][] nombreDelArray =new tipo[filas][columnas];
+
+------------------------
+Asignar elementos a un vector:
+
+vector[0] = 5;
+
+matriz[0][0] = 6;
+
+Para asignar valores a un vector podemos usar un bucle for:
+
+for (int i; i < 5; i++){
+  vector[i] = i * 2 ;
+}
+
+Para una matriz:
+
+for (int i; i < 5; i++){
+  for (int j; j < 5; j++){
+    vector[i][j] = i * 2 ;
+ }
+}
+
+
+Para iterar un vector:
+
+for (int i = 0; i < i; i++) {
+            System.out.println(vector[i]);
+        }
+
+Para iterar una matriz:
+
+for (int i = 0; i < 5; i++) {
+  for (int j = 0; j < 5; j++) {
+    System.out.print(matriz[i][j] + "/");
+ }
+System.out.println("");
+}
+
+-------------------------
+Vectores y matrices en subprogramas
+-----------------------------------
+
+Pasamos el parámetro agrregandole las llaves [] al tipo:
+
+public static void llenarVector(int[] vector){
+}
+
+public static void mostrarMatriz(int[][] matriz){
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
