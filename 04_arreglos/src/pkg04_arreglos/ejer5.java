@@ -15,28 +15,24 @@ public class ejer5 {
     /**
      * @param args the command line arguments
      */
+    private static final  Scanner leer = new Scanner(System.in);
 public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
-        
-        // Solicitar tamaño de la matriz
+                 
         System.out.println("Ingrese el tamaño de la matriz (n x n):");
         int n = leer.nextInt();
         
-        // Crear y llenar la matriz
         int[][] matriz = new int[n][n];
+        int[][] traspuesta = new int[n][n];
         System.out.println("Ingrese los elementos de la matriz:");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                matriz[i][j] = leer.nextInt();
-            }
-        }
         
-        // Mostrar la matriz ingresada
-        System.out.println("Matriz ingresada:");
+        cargarMatrices(matriz, traspuesta);
+        
+        System.out.println("Matriz original:");
         mostrarMatriz(matriz);
-        
-        // Calcular la traspuesta
-        int[][] traspuesta = obtenerTraspuesta(matriz);
+        System.out.println("Matriz traspuesta:");
+        mostrarMatriz(traspuesta);
+        System.out.println("Matriz negativa");
+        matrizNegativa(traspuesta);
         
         // Verificar antisimetría
         if (esAntisimetrica(matriz, traspuesta)) {
@@ -45,44 +41,53 @@ public static void main(String[] args) {
             System.out.println("La matriz no es antisimétrica.");
         }
     }
+
+    public static void cargarMatrices(int [][] matriz, int [][] traspuesta){
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < traspuesta.length; j++) {
+                matriz[i][j] = leer.nextInt();
+                traspuesta[j][i] = matriz [i][j];
+            }
+        }
+    }
     
     // Método para mostrar una matriz
     private static void mostrarMatriz(int[][] matriz) {
         int n = matriz.length;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(matriz[i][j] + "\t");
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    // metodo para ver una matriz cambiada de signo
+    public static void matrizNegativa(int[][] matriz){
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = -matriz[i][j];
+            }
+            
+        }      
+//  Aquí imprimo
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
             }
             System.out.println();
         }
     }
     
-    // Método para obtener la traspuesta de una matriz
-    private static int[][] obtenerTraspuesta(int[][] matriz) {
-        int n = matriz.length;
-        int[][] traspuesta = new int[n][n];
-        
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                traspuesta[j][i] = matriz[i][j];
-            }
-        }
-        
-        return traspuesta;
-    }
-    
     // Método para verificar si una matriz es antisimétrica
     private static boolean esAntisimetrica(int[][] matriz, int[][] traspuesta) {
-        int n = matriz.length;
-        
+              int n= matriz.length;  
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (matriz[i][j] != -traspuesta[i][j]) {
+                if (matriz[i][j] != -traspuesta[j][i]) {
                     return false;
                 }
             }
-        }
-        
+        }     
         return true;
     }
     
